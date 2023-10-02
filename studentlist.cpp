@@ -24,20 +24,18 @@ int main(){
   string inpt;
   vector<Student*> listt;
 
-  while(justKeepGoing = true){
-    cout << "add(a), print(p), delete(d), or quit(q)?" << endl;
+  while(justKeepGoing){
+    cout << "add(add), print(print), delete(delete), or quit(quit)?" << endl;
     cin >> inpt;
     cin.ignore();
 
-    if(inpt == "a"){
+    if(inpt == "add"){
       add(listt, num);
-      cout << "test" << endl;
-    } else if (inpt == "p"){
+    } else if (inpt == "print"){
       print(listt);
-      cout << "test2" << endl;
-    } else if (inpt == "d"){
+    } else if (inpt == "delete"){
       delet(listt, num);
-    } else{
+    } else if (inpt == "quit"){
       justKeepGoing = false;
     }
   }
@@ -92,7 +90,7 @@ void print(vector<Student*>& listt){
   cout.precision(2);
 
   for(int i = 0;i<listt.size();i++){
-    cout << listt[i]->firstName << " " << listt[i]->lastName << " " << listt[i] -> id << " " << listt[i]->gpa << endl;
+    cout << listt[i]->firstName << " " << listt[i]->lastName << ", " << listt[i] -> id << ", " << listt[i]->gpa << endl;
   }
 
   
