@@ -1,0 +1,60 @@
+#include <iostream>
+#include <cstring>
+#include <vector>
+
+
+using namespace std;
+
+struct Student{
+  char firstName[15];
+  char lastName[15];
+  int id;
+  float gpa;
+};
+
+void add(vector<Student*>& listt, int &num);
+//void print(vector<Student*>& listt);
+//void delete(vector<Student*>& listt, int &num);
+
+
+
+int main(){
+  int num;
+  bool justKeepGoing = true;
+  string inpt;
+  vector<Student*> listt;
+
+  while(justKeepGoing = true){
+    cout << "add(a), print(p), delete(d), or quit(q)?" << endl;
+    cin >> inpt;
+    cin.ignore();
+
+    if(inpt == "a"){
+      
+      cout << "test" << endl;
+    } else if (input == "p"){
+      cout << "test2" << endl;
+    }
+  }
+  return 0;
+}
+
+void add(vector<Student*>& listt, int &num){
+  Student* stud = new Student();
+
+  char firstnam[15];
+  cout << "what is the first name of the student?" << endl;
+  cin.getline(fname, 15);
+  strcpy(stud->firstName, fname);
+
+  char lastname[15];
+  cout << "what is the last name of the student?" << endl;
+  cin.getline(lname, 15);
+  strcpy(stud -> lastName lname);
+
+  int id;
+  cout << "enter id" << endl;
+  cin >> id;
+
+  
+}
